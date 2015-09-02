@@ -38,7 +38,7 @@ $.get( "http://ripando.com.br/feed.php?mode=topics", function( data ) {
         var el = $(this);
         var li = '<li><a href="'+ el.find("id").text() +'" target="_blank">'+ el.find("title").text() +'</a>';
 
-        $(".feed").append(li);
+        $(".feed").append($.parseHTML(li));
         console.log(li);
     });
   if(window.location.hash == "#popup"){
